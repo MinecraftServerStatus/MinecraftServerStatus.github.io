@@ -1,28 +1,46 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>Minecraft Server Status</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>MC Server Monitor</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="container">
-    <h1>🎮 Minecraft Server Status</h1>
+<div class="app">
 
-    <div class="search-box">
-      <input type="text" id="serverInput" placeholder="example.com">
-      <button onclick="checkServer()">チェック</button>
-    </div>
+  <header>
+    <h1>Minecraft Server Monitor</h1>
+  </header>
 
-    <div class="status-card" id="statusCard">
-      <div id="serverName">サーバー未選択</div>
-      <div id="serverStatus" class="offline">待機中</div>
-      <div id="serverInfo"></div>
-    </div>
+  <div class="control-panel">
+    <select id="edition">
+      <option value="java">Java Edition</option>
+      <option value="bedrock">Bedrock Edition</option>
+    </select>
+
+    <input type="text" id="serverInput" placeholder="example.com または IP">
+    <button onclick="addServer()">追加</button>
   </div>
 
-  <script src="script.js"></script>
+  <section>
+    <h2>お気に入り</h2>
+    <div id="favorites" class="server-grid"></div>
+  </section>
+
+  <section>
+    <h2>検索履歴</h2>
+    <div id="history" class="server-grid"></div>
+  </section>
+
+  <section>
+    <h2>サーバー一覧</h2>
+    <div id="serverList" class="server-grid"></div>
+  </section>
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
