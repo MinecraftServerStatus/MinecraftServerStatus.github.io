@@ -1,0 +1,1 @@
+# MinecraftServerStatus.github.io
