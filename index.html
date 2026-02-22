@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Minecraft Server Status</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>🎮 Minecraft Server Status</h1>
+
+    <div class="search-box">
+      <input type="text" id="serverInput" placeholder="example.com">
+      <button onclick="checkServer()">チェック</button>
+    </div>
+
+    <div class="status-card" id="statusCard">
+      <div id="serverName">サーバー未選択</div>
+      <div id="serverStatus" class="offline">待機中</div>
+      <div id="serverInfo"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
