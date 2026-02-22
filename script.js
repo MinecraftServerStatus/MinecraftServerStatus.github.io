@@ -88,3 +88,5 @@ function renderHistory() {
 
 renderFavorites();
 renderHistory();
+window.addServer = addServer;
+window.toggleFavorite = toggleFavorite;
